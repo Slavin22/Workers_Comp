@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>WC DRAFT TENDENCIES</title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<div class="jumbotron jumbotron-fluid jumbotron-center Home" id="jumbo">
+		<div class="container">
+			<h1><a href="https://slavin22.github.io/Workers_Comp/Home.html">Workers' Comp<hr>Draft Tendencies by Position</a></h1>
+		</div>
+
+		<!-- <ul class="nav">
+			<li><a href="https://slavin22.github.io/Workers_Comp/Home.html">Home</a></li>
+			<li><a class="active" href="https://slavin22.github.io/Workers_Comp/Draft_Tendencies.html">Draft Tendencies</a></li>
+			<li><a href="javascript:;" onclick="random();">Random QB</a></li>
+		</ul> -->
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="panel-group">
+				<div class="panel">
+						<!-- <div class="panel-heading Home">Draft Tendencies (by Position)</div> -->
+
+						<div class="row">
+							<div class="panel-body take">
+								<div id="plot"></div>
+							</div>
+						</div>
+
+						<div class="row" style="margin: 5px 0px 25px 5px">
+							<select class="btn" id="selDataset" onchange="getData(this.value)">
+								<option value="dataset14">All Positions</option>
+								<option value="dataset1">RB</option>
+								<option value="dataset2">WR</option>
+								<option value="dataset3">TE</option>
+								<option value="dataset4">QB</option>
+								<option value="dataset5">D</option>
+								<option value="dataset6">K</option>
+								<option value="dataset7">RB + WR</option>
+								<option value="dataset8">QB + TE</option>
+								<option value="dataset9">D + K</option>
+								<option value="dataset10">RB + WR + TE</option>
+								<option value="dataset11">QB + D + K</option>
+								<option value="dataset12">QB + RB + WR + TE</option>
+								<option value="dataset13">QB + TE + D + K</option>
+							</select>
+						</div>
+
+					</div>
+			</div>
+		</div>
+
+
+		<!-- <div class="row">
+			<div class="panel-group">
+				<div class="panel">
+					<div class="panel-heading Home">Created by <a href="https://twitter.com/Slavin22"><u>Sean Slavin</u></a> of <a href="https://twoqbs.com/"><u>TwoQBs</u></a>, all stats courtesy of <a href="https://www.sports-reference.com/cfb/"><u>Sports Reference</u></a>.</div>
+				</div>
+			</div>
+		</div> -->
+
+
+	</div>
+
+	<script src="dtData.js" type="text/javascript"></script>
+    <script src="scatter.js" type="text/javascript"></script>
+
+</body>
+</html>
